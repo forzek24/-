@@ -1,0 +1,233 @@
+/* ===== ОБЩИЕ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #F5E6D3;
+    color: #3E2723;
+    line-height: 1.6;
+}
+
+/* ===== ШАПКА ===== */
+header {
+    background-color: #6D4C41;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 28px;
+    color: #F5E6D3;
+    font-weight: bold;
+}
+
+nav a {
+    color: #F5E6D3;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFD54F;
+}
+
+/* ===== ГЛАВНЫЙ БЛОК ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px;
+    background: linear-gradient(135deg, #A1887F, #6D4C41);
+    color: #F5E6D3;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* ===== КНОПКИ ===== */
+.btn {
+    display: inline-block;
+    background-color: #3E2723;
+    color: #F5E6D3;
+    padding: 15px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FFD54F;
+    color: #3E2723;
+    transform: scale(1.05);
+}
+
+/* ===== МЕНЮ ===== */
+.menu-section {
+    padding: 80px 60px;
+    background-color: #F5E6D3;
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: #3E2723;
+}
+
+.menu-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.menu-block {
+    flex: 1;
+    min-width: 280px;
+    background-color: #EFEBE9;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.menu-block h3 {
+    font-size: 28px;
+    color: #6D4C41;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #A1887F;
+    padding-bottom: 12px;
+}
+
+.menu-block p {
+    font-size: 18px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ===== КОНТАКТЫ ===== */
+.contacts {
+    padding: 80px 60px;
+    background-color: #6D4C41;
+    color: #F5E6D3;
+}
+
+.contacts h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.contacts-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacts-info p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.contacts .btn {
+    margin-top: 30px;
+    background-color: #FFD54F;
+    color: #3E2723;
+}
+
+.contacts .btn:hover {
+    background-color: #F5E6D3;
+    transform: scale(1.05);
+}
+
+/* ===== ПОДВАЛ ===== */
+footer {
+    background-color: #3E2723;
+    color: #F5E6D3;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+/* ===== АДАПТИВ ПОД ТЕЛЕФОН ===== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .menu-section, .contacts {
+        padding: 40px 20px;
+    }
+
+    .menu-section h2, .contacts h2 {
+        font-size: 28px;
+    }
+}
